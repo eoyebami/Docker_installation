@@ -41,7 +41,7 @@ sleep 2
 
 echo "Configuring Docker Repository, Please wait .... "
 sleep 2
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo -y
 sleep 2
 if [ $? -eq 0 ]
         then
@@ -55,7 +55,7 @@ sleep 2
 #Install the docker engine
 echo "Installing the Docker engine, Please wait .... "
 sleep 2
-yum install docker-ce docker-ce-cli containerd.io
+yum install docker-ce docker-ce-cli containerd.io -y
 sleep 2
 if [ $? -eq 0 ]
         then
